@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
 
         val dayOfWeek = Calendar.getInstance().apply { time = dateFormat.parse(currentDate) }.get(Calendar.DAY_OF_WEEK)
 
-        if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
+        if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY || dayOfWeek == Calendar.FRIDAY) {
             notifyTelegram("Exiting as day is a weekend")
             return
         }
